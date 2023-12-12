@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Art Space</string>
+
+    <string name="title_pic_1">There was always something new to be seen in the unchanging night sky</string>
+    <string name="artist_pic_1">Mila Wilcox</string>
+    <string name="year_pic_1">2016</string>
+
+    <string name="title_pic_2">Cats rule the world</string>
+    <string name="artist_pic_2">Rosanna Bowman</string>
+    <string name="year_pic_2">2022</string>
+
+    <string name="title_pic_3">Cats choose us; we don\'t own them</string>
+    <string name="artist_pic_3">Trinity Santana</string>
+    <string name="year_pic_3">2014</string>
+
+    <string name="title_pic_4">Nothing can bring you peace but yourself</string>
+    <string name="artist_pic_4">Marco Martin</string>
+    <string name="year_pic_4">2019</string>
+
+    <string name="title_pic_5">Life\'s a beach, and I\'m just playing in the sand</string>
+    <string name="artist_pic_5">Brian Perry</string>
+    <string name="year_pic_5">2009</string>
+
+    <string name="title_pic_6">Old age comes on suddenly, and not gradually as is thought</string>
+    <string name="artist_pic_6">Stella Gillespie</string>
+    <string name="year_pic_6">2011</string>
 </resources>
