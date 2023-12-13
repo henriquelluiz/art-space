@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -22,7 +23,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -51,7 +52,7 @@ class MainActivity : ComponentActivity() {
             ArtSpaceTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = Color.White
                 ) {
                     ArtSpaceLayout(
                         modifier = Modifier
@@ -144,8 +145,9 @@ fun ElevatedImageWithPadding(
     Image(
         painter = painterResource(painter),
         contentDescription = null,
-        contentScale = ContentScale.Fit,
+        contentScale = ContentScale.Crop,
         modifier = modifier
+            .aspectRatio(0.8F)
             .shadow(elevation = 12.dp, shape = RectangleShape)
             .border(24.dp, color = Color.White, shape = RectangleShape)
     )
@@ -158,11 +160,16 @@ fun InformationCard(
     @StringRes year: Int,
     modifier: Modifier = Modifier
 ) {
-    Card(modifier = modifier) {
+    Card(
+        colors = CardDefaults.cardColors(
+            containerColor = Color(0xFFF5F1FF)
+    ),
+        modifier = modifier
+    ) {
         Text(
             text = stringResource(title),
             fontWeight = FontWeight.Light,
-            fontSize = 24.sp,
+            fontSize = 22.sp,
             modifier = Modifier.padding(
                 start = 16.dp,
                 end = 16.dp,
@@ -184,13 +191,13 @@ fun InformationCard(
             Text(
                 text = stringResource(artist),
                 fontWeight = FontWeight.ExtraBold,
-                fontSize = 19.sp
+                fontSize = 18.sp
             )
-            Spacer(modifier = Modifier.width(5.dp))
+            Spacer(modifier = Modifier.width(4.dp))
             Text(
                 text = "(${ stringResource(year) })",
                 fontWeight = FontWeight.Light,
-                fontSize = 19.sp
+                fontSize = 18.sp
             )
         }
     }
